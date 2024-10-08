@@ -1,0 +1,114 @@
+/* General styling */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #4b2c2c;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* One column for the title, one for the nav */
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd; /* Optional: border below the header */
+}
+.skip-link {
+    position: absolute;
+    top: -40px; /* Move off-screen */
+    left: 0;
+    background: #444;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 10px; /* Move back on-screen when focused */
+  }
+  
+h1 {
+    font-size: 3rem; /* Increase the title size */
+    color: #4b2c2c;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+    grid-column: 1 / 2; /* Make sure h1 stays in the first column */
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns the nav to the right */
+    border-top: 1px solid #ddd; /* Line above the navigation */
+    border-bottom: 1px solid #ddd; /* Line below the navigation */
+    padding: 10px 0;
+    max-width: 600px; /* Optional: Limit the width of the nav */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    gap: 20px; /* Space between the links */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #8b3f4d;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increase font size for the links */
+}
+
+nav ul li a:hover {
+    color: #4b2c2c; /* Optional: hover effect for links */
+}
+
+/* Additional layout tweaks */
+nav {
+    margin-left: auto; /* Align the nav to the right */
+}
+
+
+/* Post meta styling */
+.post-meta {
+    text-align: center;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.post-meta p {
+    margin: 5px 0;
+}
+
+/* Post content styling */
+.post-content {
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #8b3f4d;
+}
+
+img {
+    max-width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+article {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+article img {
+    max-width: 200px;
+    display: block;
+    margin: 10px auto;
+}
