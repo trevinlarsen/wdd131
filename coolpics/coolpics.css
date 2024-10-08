@@ -1,0 +1,178 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+
+/* Media query for screens wider than 700px */
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;  /* Ensure the gallery uses grid layout */
+        grid-template-columns: repeat(2, 1fr);  /* Switch to two columns */
+    }
+}
+
+/* Media query for screens wider than 1000px */
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);  /* Switch to three columns */
+    }
+    /* Hide the menu button on wider screens */
+    button.menu {
+        display: none;  /* Hide the menu button */
+    }
+    
+    /* Adjust header and footer if necessary */
+    header, footer {
+        padding: 20px;  /* Add more padding for wider screens */
+    }
+}
+.hide {
+    display: none;
+}
+
+/* CSS Custom Properties (Variables) */
+:root {
+    --primary-color: #52489c;  /* Main background color */
+    --secondary-color: #59c3c3; /* Secondary color for accents */
+    --accent-color: #f45b69;    /* Link color */
+    --text-dark: #333;           /* Dark text color */
+    --text-light: #ebebeb;       /* Light text color */
+    --primary-font: Arial, Helvetica, sans-serif; /* Body font */
+    --secondary-font: 'Mooli', sans-serif; /* Headline font */
+}
+
+/* Global styles */
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;  /* Increased base font size */
+    
+    color: var(--text-light);  /* Text color */
+    margin: 0;  /* Remove default margin */
+}
+
+/* Header styles */
+header {
+    text-align: center;  /* Center the header text */
+    padding: 20px;  /* Padding around header */
+    background-color: var(--primary-color);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;  /* Center footer text */
+    padding: 10px;  /* Padding around footer */
+    background-color: var(--primary-color);  /* Footer background color */
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;  /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    gap: 10px;  /* Space between images */
+    padding: 20px;  /* Padding around gallery */
+}
+
+/* Figure styles */
+figure {
+    margin: 0;  /* Remove default margin */
+    overflow: hidden;  /* Hide overflow for image cropping */
+}
+
+/* Image styles */
+img {
+    width: 250px;  /* Set width */
+    height: 250px; /* Set height */
+    object-fit: cover;  /* Crop image to fit */
+    max-width: 100%;  /* Make image responsive */
+}
+
+/* Link styles */
+a:link,
+a:visited {
+    color: var(--accent-color);  /* Link color */
+    text-decoration: none;  /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline;  /* Underline on hover */
+}
+
+/* Button styles for Menu */
+button.menu {
+    background: none;  /* No background */
+    border: none;  /* No border */
+    color: var(--text-light);  /* Text color */
+    font-size: 1.2em;  /* Font size */
+    cursor: pointer;  /* Pointer cursor */
+}
+
+
+/* Remove default styles for the unordered list */
+.menu ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;           /* Remove default padding */
+    margin: 0;            /* Remove default margin */
+    display: flex;        /* Use flexbox to arrange items horizontally */
+    justify-content: center;
+}
+
+/* Style individual menu items */
+.menu li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+/* Style links in the menu */
+.menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--accent-color); /* Change to your desired link color */
+    font-weight: bold;    /* Optional: make the text bold */
+}
+
+/* Optional: Change link color on hover */
+.menu a:hover {
+    color: var(--secondary-color); /* Change color on hover */
+}
+
+/* Modal styles */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.hide {
+    display: none; /* This class hides the modal */
+}
+
+
+.viewer img {
+    max-height: 90%; /* Limit max height to prevent overflow */
+    max-width: 90%;  /* Limit max width to prevent overflow */
+}
+
+.close-viewer {
+    background: none; /* No background */
+    border: none;     /* No border */
+    color: white;     /* Color for visibility */
+    font-size: 2em;   /* Increase size */
+    cursor: pointer;  /* Pointer cursor */
+}
+
+/* Media Query for larger screens */
+@media (min-width: 1000px) {
+    .viewer {
+        padding: 20px; /* Add some padding around the modal */
+        max-width: 800px; /* Set a maximum width */
+        max-height: 80%; /* Limit height */
+    }
+
+    .viewer img {
+        max-height: 100%; /* Keep image from overflowing */
+    }
+}
