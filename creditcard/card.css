@@ -1,0 +1,81 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.credit-card-form {
+    display: grid;
+    grid-template-areas:
+        "front"
+        "back"
+        "button";
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Card Front */
+.card-front {
+    z-index: 2;
+    grid-area: front;
+}
+
+/* Card Back */
+.card-back {
+    z-index: 1;
+    grid-area: back;
+    background-color: #ccc;
+}
+
+/* Styling Form Elements */
+label {
+    font-size: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+    grid-area: button;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
