@@ -1,0 +1,77 @@
+/* Base styles */
+body {
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px; /* Space from the edges of the viewport */
+    padding: 20px; /* Space inside the body, between content and border */
+    border: 2px solid black; /* Thin border around the entire page */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Centering the titles and content */
+.title {
+    text-align: center;
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.title h1 {
+    letter-spacing: 1px; /* Space out letters */
+    text-transform: uppercase; /* Make title uppercase */
+    margin: 0; /* Remove default margin */
+}
+
+.title h2 {
+    color: #006EB6; /* Subtitle color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Main content styles */
+main {
+    max-width: 600px; /* Limit content width */
+    margin: 0 auto; /* Center the main content */
+    padding: 20px; /* Space inside main content */
+    text-align: center; /* Center text in the main content */
+}
+
+/* Paragraph styles */
+main p {
+    text-align: left; /* Keep paragraph text left-aligned */
+    margin-bottom: 15px; /* Space below each paragraph */
+}
+
+/* Footer styles */
+footer {
+    text-align: center; /* Center the footer content */
+    margin-top: 20px; /* Space above footer */
+}
+
+/* Logo styles */
+.logo {
+    width: 100px; /* Set logo size smaller */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Allow centering */
+    margin: 0 auto; /* Center the logo */
+}
+
+/* Dark theme styles */
+.dark {
+    background-color: #333; /* Dark background */
+    color: #fff; /* Light text color */
+}
+
+.dark h2 {
+    color: #00A4E4; /* Change subtitle color for dark theme */
+}
+
+/* Light text color for paragraphs */
+.dark p {
+    color: #fffefe; /* Light color for paragraphs */
+}
+
+/* Ensure all text elements are light in the dark theme */
+.dark h1,
+.dark p {
+    color: #ddd; /* Set a lighter color for headings and paragraphs */
+}
+
