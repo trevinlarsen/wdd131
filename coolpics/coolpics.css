@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    button.menu {
+        display: none;
+    }
+    header, footer {
+        padding: 20px;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #599ddd;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Mooli', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    color: var(--text-light);
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+a:link,
+a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button.menu {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: var(--secondary-color);
+}
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.viewer img {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.close-viewer {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    .viewer {
+        padding: 20px;
+        max-width: 800px;
+        max-height: 80%;
+    }
+
+    .viewer img {
+        max-height: 100%;
+    }
+}
