@@ -30,10 +30,17 @@ function viewHandler(event) {
     if (event.target.tagName === 'IMG') {
         const imageSrc = event.target.src;
         const imageParts = imageSrc.split("-");
-        const fullImageSrc = imageParts[0] + "-full.jpeg";
+        const fullImageSrc = imageParts[0] + "-full.jpeg";  // Assuming your full image uses "-full"
 
-        document.body.insertAdjacentHTML("afterbegin", viewerTemplate(fullImageSrc, event.target.alt));
+        // Insert viewer HTML at the top of the body
+        const viewerHTML = viewerTemplate(fullImageSrc, event.target.alt);
+        document.body.insertAdjacentHTML("afterbegin", viewerHTML);
 
+        
+        const viewer = document.querySelector('.viewer');
+        viewer.style.display = 'block';
+
+        
         const closeButton = document.querySelector('.close-viewer');
         closeButton.addEventListener('click', closeViewer);
     }

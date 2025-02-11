@@ -122,6 +122,7 @@ button.menu {
     justify-items: center;
     align-items: center;
     z-index: 1000;
+    display: none;
 }
 
 .viewer img {
@@ -135,6 +136,9 @@ button.menu {
     color: white;
     font-size: 2em;
     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 @media (min-width: 1000px) {
