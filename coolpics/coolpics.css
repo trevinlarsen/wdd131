@@ -125,8 +125,8 @@ button.menu {
 }
 
 .viewer img {
-    max-height: 200%;
-    max-width: 200%;
+    max-height: 90%;
+    max-width: 90%;
 }
 
 .close-viewer {
