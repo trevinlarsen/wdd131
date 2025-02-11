@@ -30,9 +30,9 @@ function viewHandler(event) {
     if (event.target.tagName === 'IMG') {
         const imageSrc = event.target.src;
         const imageParts = imageSrc.split("-");
-        const fullImageSrc = imageParts[0] + "-full.jpeg";  // Assuming your full image uses "-full"
+        const fullImageSrc = imageParts[0] + "-full.jpeg";  
 
-        // Insert viewer HTML at the top of the body
+        
         const viewerHTML = viewerTemplate(fullImageSrc, event.target.alt);
         document.body.insertAdjacentHTML("afterbegin", viewerHTML);
 
