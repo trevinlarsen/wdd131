@@ -1,60 +1,80 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let participantCount = 1;
-    const addButton = document.getElementById("add");
-    const participantsFieldset = document.querySelector(".participants");
-    const form = document.getElementById("registration-form");
-    const summary = document.getElementById("summary");
+  //populate grade options in the <select> element
+  const select = document.getElementById("grade-select");
+  if (select) {
+    const max_val = 12;
+    for (let i = 1; i <= max_val; i++) {
+      const option = document.createElement("option");
+      option.value = i;
+      option.textContent = `${i}${getSuffix(i)} Grade`;
+      select.appendChild(option);
+    }
+    function getSuffix(num) {
+      if (num == 1) return "st";
+      if (num == 2) return "nd";
+      if (num == 3) return "rd";
+      return "th";
+    }
+  }
 
-    
-    addButton.addEventListener("click", () => {
-        participantCount++;
+  let participantCount = 1;
+  const addButton = document.getElementById("add");
+  const participantsFieldset = document.querySelector(".participants");
+  const form = document.getElementById("registration_form");
+  const summary = document.getElementById("summary");
+  console.log(form);
 
-        const firstParticipant = document.querySelector(".participant1");
-        const newParticipant = firstParticipant.cloneNode(true);
+  addButton.addEventListener("click", () => {
+    participantCount++;
 
-        newParticipant.className = `participant${participantCount}`;
-        newParticipant.querySelector("p").textContent = `Participant ${participantCount}`;
+    const firstParticipant = document.querySelector(".participant1");
+    const newParticipant = firstParticipant.cloneNode(true);
 
-        newParticipant.querySelectorAll("input, select").forEach((input) => {
-            const name = input.getAttribute("name");
-            if (name) {
-                input.setAttribute("name", name + participantCount);
-            }
-            if (input.id) {
-                input.id = input.id + participantCount;
-            }
-            input.value = "";
-        });
+    newParticipant.className = `participant${participantCount}`;
+    newParticipant.querySelector(
+      "p"
+    ).textContent = `Participant ${participantCount}`;
 
-        participantsFieldset.insertBefore(newParticipant, addButton);
+    newParticipant.querySelectorAll("input, select").forEach((input) => {
+      const name = input.getAttribute("name");
+      if (name) {
+        input.setAttribute("name", name + participantCount);
+      }
+      if (input.id) {
+        input.id = input.id + participantCount;
+      }
+      input.value = "";
     });
 
-    
-    function totalFees() {
-        let feeElements = document.querySelectorAll("[id^=fee]");
-        feeElements = [...feeElements];
-        return feeElements.reduce((sum, input) => sum + (parseFloat(input.value) || 0), 0);
-    }
+    participantsFieldset.insertBefore(newParticipant, addButton);
+  });
 
-    
-    function successTemplate(info) {
-        return `Thank you ${info.name} for registering. You have registered ${info.count} participants and owe $${info.totalFees} in Fees.`;
-    }
+  function totalFees() {
+    let feeElements = document.querySelectorAll("[id^=fee]");
+    feeElements = [...feeElements];
+    return feeElements.reduce(
+      (sum, input) => sum + (parseFloat(input.value) || 0),
+      0
+    );
+  }
 
-    
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
+  function successTemplate(info) {
+    return `Thank you ${info.name} for registering. You have registered ${info.count} participants and owe $${info.totalFees} in Fees.`;
+  }
 
-        const total = totalFees();
-        const adultName = document.getElementById("adult-name").value || "Guest";
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-        form.style.display = "none";
-        summary.textContent = successTemplate({
-            name: adultName,
-            count: participantCount,
-            totalFees: total
-        });
-        console.log(summary);
-        summary.style.display = "block";
+    const total = totalFees();
+    const adultName = document.getElementById("adult_name").value || "Guest";
+
+    form.style.display = "none";
+    summary.textContent = successTemplate({
+      name: adultName,
+      count: participantCount,
+      totalFees: total,
     });
+    console.log(summary);
+    summary.style.display = "block";
+  });
 });
