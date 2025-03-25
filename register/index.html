@@ -12,7 +12,7 @@
   <body>
     <div class="testbox">
       <h1>Camp Registration</h1>
-      <form>
+      <form id="registration_form">
         <fieldset class="participants">
           <legend>Participant Information</legend>
           <section class="participant1">
@@ -35,8 +35,9 @@
             </div>
             <div class="item">
               <p>Grade</p>
-              <select>
+              <!-- <select>
                 <option selected value="" disabled selected></option>
+                
                 <option value="1">1st</option>
                 <option value="2">2nd</option>
                 <option value="3">3rd</option>
@@ -49,6 +50,9 @@
                 <option value="10">10th</option>
                 <option value="11">11th</option>
                 <option value="12">12th</option>
+              </select> -->
+              <select id="grade-select">
+                <option value="" disabled selected>Select Grade</option>
               </select>
             </div>
           </section>
@@ -147,7 +151,7 @@
         <div class="btn-block">
           <button type="submit" id="submitButton">Submit</button>
         </div>
-        <div id="summary" style="display: none;"></div>
+        <!-- <div id="summary" style="display: none"></div> -->
       </form>
       <section id="summary"></section>
     </div>
