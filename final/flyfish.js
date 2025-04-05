@@ -1,4 +1,4 @@
-// Data for species, general tips, seasonal tips, and images
+
 const tipsData = {
     brown: {
         general: {
@@ -68,19 +68,19 @@ const tipsData = {
     }
 };
 
-// Function to update the tips and images based on species and season
+
 function updateTips() {
     const species = document.getElementById('species').value;
     const season = document.getElementById('season').value;
 
-    // Display general tips and image
+    
     document.getElementById('generalTips').innerText = tipsData[species].general.text;
     document.getElementById('generalImage').src = tipsData[species].general.image;
 
-    // Display seasonal tips and image
+    
     document.getElementById('seasonalTips').innerText = tipsData[species][season].text;
     document.getElementById('seasonalImage').src = tipsData[species][season].image;
 }
 
-// Initialize the tips and images based on default selection
+
 updateTips();

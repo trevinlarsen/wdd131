@@ -1,13 +1,11 @@
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap');
 
-/* Base Styles */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #F5F5DC; /* Accent 2 */
-  color: #3B411D; /* Primary */
+  background-color: #F5F5DC; 
+  color: #3B411D; 
 }
 body-items {
     padding: 2rem;
@@ -21,15 +19,15 @@ body-items {
   
   body-items div {
     display: flex;
-    gap: 1rem; /* Space between the image and text */
+    gap: 1rem; 
     margin-bottom: 2rem;
   }
   
   body-items img {
-    max-width: 400px; /* Control the image size */
+    max-width: 400px; 
     height: auto;
     display: block;
-    border-radius: 5px; /* Optional: add rounded corners */
+    border-radius: 5px; 
     padding: 1rem;
     margin-right: 1rem;
   }
@@ -37,7 +35,7 @@ body-items {
   body-items h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
-    margin: 0; /* Remove default margin */
+    margin: 0; 
   }
   
   body-items p {
@@ -45,22 +43,22 @@ body-items {
     font-size: 1rem;
     line-height: 1.5;
     margin-top: 0.5rem;
-    max-width: 500px; /* Control text width */
+    max-width: 500px; 
   }
 
 .logo img {
-    max-width: 220px; /* Adjust this to make it smaller */
+    max-width: 220px; 
     height: 100px;
   }
   
-  /* For the title text */
+  
   .title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.25rem; /* Adjust this to make the text smaller */
+    font-size: 2.25rem; 
     font-weight: bold;
   }
   
-  /* For header layout */
+ 
   header {
     margin: 0;
     display: flex;
@@ -71,7 +69,7 @@ body-items {
     color: white;
   }
   
-  /* Navigation styles */
+  
   nav ul {
     list-style: none;
     display: flex;
@@ -114,20 +112,20 @@ body-items {
   margin-top: 1rem;
 }
 .cta2-button {
-    background-color: #255F85; /* Accent 3 */
+    background-color: #255F85; 
     color: white;
     padding: 0.75rem 1.5rem;
     align-items: center;
 }
 
-/* Sections */
+
 section {
   padding: 2rem 1rem;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  color: #255F85; /* Accent 3 */
+  color: #255F85; 
 }
 
 .location-grid {
@@ -156,6 +154,7 @@ h2 {
 
     
 }
+
 /* Footer */
 footer {
   background-color: #3B411D; /* Primary */
