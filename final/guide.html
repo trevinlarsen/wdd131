@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fishing Guide | Fly Fishing in SE Idaho</title>
+  <link rel="stylesheet" href="flyfish.css" />
+</head>
+<body>
+
+
+  <header>
+    <div class="logo"> <img src="pictures/logo.png" alt=""></div>
+    <div class="title">Fly Fish Idaho</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guide.html">Fishing Guide</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <main>
+    <section class="guide-header">
+      <h1>SE Idaho Fishing Guide</h1>
+      <p>Explore the best species, gear, and locations for fly fishing in Southeast Idaho.</p>
+    </section>
+
+   
+    <section class="species">
+      <h2>Choose Your Species</h2>
+      <label for="species">Select Species:</label>
+      <select id="species" onchange="updateTips()">
+        <option value="brown">Brown Trout</option>
+        <option value="rainbow">Rainbow Trout</option>
+        <option value="cutthroat">Cutthroat Trout</option>
+      </select>
+    </section>
+
+    
+    <section class="season">
+      <h2>Select Season</h2>
+      <label for="season">Select Season:</label>
+      <select id="season" onchange="updateTips()">
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+        <option value="fall">Fall</option>
+        <option value="winter">Winter</option>
+      </select>
+    </section>
+
+    
+    <section class="tips">
+      <h2>Fishing Tips</h2>
+      <h3>General Tips:</h3>
+      <p id="generalTips">Select a species and season to get fishing tips.</p>
+      <img id="generalImage" src="" alt="General Tips Image" width="500" />
+
+      <h3>Seasonal Tips:</h3>
+      <p id="seasonalTips">Seasonal tips will appear here based on your selection.</p>
+      <img id="seasonalImage" src="" alt="Seasonal Tips Image" width="500" />
+    </section>
+
+    <section class="gear">
+      <h2>Recommended Gear</h2>
+      <ul>
+        <li>9’ 5wt Fly Rod or 6wt</li>
+        <li>Weight Forward Floating Line</li>
+        <li>Some good wading boots and waders!</li>
+        <img src="pictures/9ft.png" alt="Rod">
+      </ul>
+    </section>
+
+    <section class="map-placeholder">
+      <h2>Fishing Map</h2>
+      <p><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1hLtLtV2uC6fodS8nEP-Qpy3SI-j8AVo&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>]</p>
+    </section>
+  </main>
+
+ 
+  <footer>
+    <p>&copy; 2025 Fly Fishing Idaho. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home |</a>
+      <a href="guide.html">Fishing Guide |</a>
+      <a href="https://www.google.com/maps/d/u/0/viewer?mid=1hLtLtV2uC6fodS8nEP-Qpy3SI-j8AVo&femb=1&ll=44.017754763246415%2C-111.41580515&z=12">Access Map</a>
+    </div>
+  </footer>
+
+
+  <script src="flyfish.js"></script>
+
+</body>
+</html>
