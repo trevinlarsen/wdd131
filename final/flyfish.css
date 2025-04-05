@@ -64,7 +64,7 @@ body-items {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #4F8052; /* Secondary color */
+    background-color: #4F8052; 
     padding: 0.5rem;
     color: white;
   }
@@ -82,11 +82,11 @@ body-items {
     font-weight: bold;
   }
 
-/* Hero Section */
+
 .hero {
   text-align: center;
   padding: 3rem 1rem;
-  background-color: #B8BE96; /* Accent 1 */
+  background-color: #B8BE96;
 }
 .hero-img {
     width: 100%;
@@ -103,7 +103,7 @@ body-items {
 }
 
 .cta-button {
-  background-color: #255F85; /* Accent 3 */
+  background-color: #255F85; 
   color: white;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
@@ -155,9 +155,9 @@ h2 {
     
 }
 
-/* Footer */
+
 footer {
-  background-color: #3B411D; /* Primary */
+  background-color: #3B411D; 
   color: white;
   text-align: center;
   padding: 1rem;
